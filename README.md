@@ -2,8 +2,8 @@
 
 **Docker image for video streaming server that supports RTMP, HLS, and DASH streams.**
 
-[![Docker Automated build](https://img.shields.io/docker/cloud/automated/stackcc/rtmp.svg)](https://hub.docker.com/r/stackcc/rtmp/builds/)
-[![Build Status](https://img.shields.io/docker/cloud/build/stackcc/rtmp.svg)](https://hub.docker.com/r/stackcc/rtmp)
+[![Docker Automated build](https://img.shields.io/docker/cloud/automated/stackcc/rtmp-server.svg)](https://hub.docker.com/r/stackcc/rtmp-server/builds/)
+[![Build Status](https://img.shields.io/docker/cloud/build/stackcc/rtmp-server.svg)](https://hub.docker.com/r/stackcc/rtmp-server)
 
 ## Description
 
@@ -33,17 +33,15 @@ This image was inspired by similar docker images from [tiangolo](https://hub.doc
 
 ### To run the server
 ```
-docker run -d -p 1935:1935 -p 8080:8080 stackcc/rtmp
+docker run -d -p 1935:1935 -p 8080:8080 stackcc/rtmp-server
 ```
 
 For Alpine-based Image use:
 ```
-docker run -d -p 1935:1935 -p 8080:8080 stackcc/rtmp:latest-alpine
-```
 
 To run with custom conf file:
 ```
-docker run -d -p 1935:1935 -p 8080:8080 -v custom.conf:/etc/nginx/nginx.conf stackcc/rtmp
+docker run -d -p 1935:1935 -p 8080:8080 -v custom.conf:/etc/nginx/nginx.conf stackcc/rtmp-server
 ```
 where `custom.conf` is the new conf file for Nginx.
 
@@ -94,4 +92,4 @@ Released under MIT license.
 ## More info
  * **GitHub repo**: <https://github.com/Tareqstackcc/rtmp-server.git>
 
- * **Docker Hub image**: <https://hub.docker.com/r/stackcc/rtmp>
+ * **Docker Hub image**: <https://hub.docker.com/r/stackcc/rtmp-server>
